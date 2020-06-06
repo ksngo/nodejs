@@ -3,6 +3,8 @@ const hbs = require('hbs')
 const setup = require("./setup")
 const hbsHelper = require("./hbsHelper")
 const routes = require("./routes")
+const tasksRoutes = require("./tasksRoutes")
+const mongoUtil = require("./mongoUtil")
 
 let app = express()
 
@@ -23,14 +25,13 @@ hbsHelper.hbsHelper()
 //   res.render("index")
 //  })
 
-app.use("/", routes)
 
+mongoUtil.connect(function(){
+    
+    app.use("/", routes)
+    app.use("/tasks", tasksRoutes)
 
-
-
-
-
-
+})
 
 
 

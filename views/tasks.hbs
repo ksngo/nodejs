@@ -1,0 +1,26 @@
+
+<h1> Listing and Reviews </h1>
+
+<table class="table table-responsive">
+
+    <thead>
+        <th>  date</th>
+        <th> description </th>
+        <th> due date </th>
+        <th> status </th>
+        <th> date completed</th>
+    </thead>
+    {{#each data}}
+    <tr>
+        <td> {{this.date}} </td>
+        <td> {{this.description}} </td>
+        <td> {{this.due}} </td>
+        <td> {{this.completed}} </td>
+        <td> {{this.complete_date}} </td>
+    </tr>
+    {{/each}}
+</table>
+
+{{#extend "title"}}
+    Listings
+{{/extend}}
