@@ -1,0 +1,17 @@
+
+<h1> Create Task </h1>
+
+<form method="POST">
+    <label> date </label>
+    <input type="datetime-local" name="date" class="form-control"><br>
+    <label> description </label>
+    <textarea name="description" class="form-control"></textarea><br>
+    <label> Due date </label>
+    <input type="datetime-local" name="due" class="form-control"><br>
+
+    <input type="submit" class="btn btn-primary">
+</form>
+
+{{#extend "title"}}
+    Create Task
+{{/extend}}

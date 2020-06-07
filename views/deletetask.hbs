@@ -1,0 +1,15 @@
+<h1> Delete Task </h1>
+
+<ul>
+    <li>Date creation : {{data.date}} </li>
+    <li>Description : {{data.description}} </li>
+    <li>Due : {{data.due}} </li>
+    <li>Completed? : {{data.completed}} </li>
+    <li> Complete date : {{data.complete_date}} </li>
+</ul>
+
+<form method="POST">
+    Confirm delete?
+    <input type="submit" value="Yes" class="btn btn-primary">
+    <a href="/tasks" class="btn btn-primary">No</a>
+</form>

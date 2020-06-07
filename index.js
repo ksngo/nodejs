@@ -28,8 +28,9 @@ hbsHelper.hbsHelper()
 
 mongoUtil.connect(function(){
     
-    app.use("/", routes)
     app.use("/tasks", tasksRoutes)
+    app.use("/", routes)
+    
 
 })
 

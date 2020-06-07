@@ -1,5 +1,5 @@
 
-<h1> Listing and Reviews </h1>
+<h1> Tasks </h1>
 
 <table class="table table-responsive">
 
@@ -9,6 +9,7 @@
         <th> due date </th>
         <th> status </th>
         <th> date completed</th>
+        <th> &nbsp;</th>
     </thead>
     {{#each data}}
     <tr>
@@ -17,10 +18,11 @@
         <td> {{this.due}} </td>
         <td> {{this.completed}} </td>
         <td> {{this.complete_date}} </td>
+        <td> <a href="/tasks/edit/{{this._id}}">Edit</a> &nbsp; <a href="/tasks/delete/{{this._id}}">delete</a> </td>
     </tr>
     {{/each}}
 </table>
 
 {{#extend "title"}}
-    Listings
+    Tasks
 {{/extend}}
