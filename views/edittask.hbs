@@ -5,20 +5,20 @@
 
 <form method="POST">
     <label> date </label><br>
-    {{data.date}}
-    <input type="datetime-local" name="date" class="form-control" value="{{data.date}}"> <br>
+    {{data.date}} <br>
+    <input type="datetime-local" name="date" class="form-control" value="{{date}}"> <br>
     <label> description </label>
     <textarea name="description" class="form-control">{{data.description}}</textarea> <br>
     <label> Due date </label><br>
     {{data.due}}
-    <input type="datetime-local" name="due" class="form-control" value="{{data.due}}"><br>
+    <input type="datetime-local" name="due" class="form-control" value="{{due}}"><br>
     <label> Completed</label>
     <input type="radio" name="completed" class="form-control" value="true" {{#if data.completed}}checked{{/if}}>
     <label> Not Complete</label>
     <input type="radio" name="completed" class="form-control" value="false" {{#unless data.completed}}checked{{/unless}} ><br>
     <label> Complete date </label><br>
     {{data.complete_date}}
-    <input type="datetime-local" name="complete_date" class="form-control" value="{{data.complete_date}}"><br>
+    <input type="datetime-local" name="complete_date" class="form-control" value="{{complete_date}}"><br>
 
     <input type="submit" class="btn btn-primary">
 </form>

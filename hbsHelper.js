@@ -1,4 +1,5 @@
 const hbs = require("hbs")
+const moment =require("moment")
 
 function hbsHelper(){
 
@@ -20,6 +21,11 @@ function hbsHelper(){
     blocks[name] = [];
     return val;
     });
+
+    hbs.registerHelper('formatTime', function (date, format) {
+    var mmnt = moment(date);
+    return mmnt.format(format);
+});
 }
 
 module.exports = {
